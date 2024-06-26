@@ -1,0 +1,12 @@
+Méthode de compilation et de test
+
+Utilisant Maven (java)
+
+la commande compilation et de test est:
+
+"mvn compile test" sachant que les test était fait pour chaque partie avant de passé à un autre:
+
+exemple : fonction addition -> test addition
+          fonction soustraction -> test soustraction
+          fonction multiplication -> test multiplication
+          fontion all -> test all
