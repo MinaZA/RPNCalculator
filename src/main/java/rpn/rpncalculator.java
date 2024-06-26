@@ -1,6 +1,7 @@
 package rpn;
 
 import java.util.Stack;
+
 public class RPNCalculator {
     public double evaluate(String expression) {
         Stack<Double> stack = new Stack<>();
@@ -11,6 +12,10 @@ public class RPNCalculator {
                 case "+":
                     if (stack.size() < 2) throw new IllegalArgumentException("Invalid RPN expression");
                     stack.push(stack.pop() + stack.pop());
+                    break;
+                case "-":
+                    if (stack.size() < 2) throw new IllegalArgumentException("Invalid RPN expression");
+                    stack.push(-stack.pop() + stack.pop());
                     break;
                 default:
                     try {
@@ -28,7 +33,7 @@ public class RPNCalculator {
 
     public static void main(String[] args) {
         RPNCalculator calculator = new RPNCalculator();
-        String expression = "3 4 +";
+        String expression = "5 3 -";
         System.out.println("Result: " + calculator.evaluate(expression));
     }
 }
