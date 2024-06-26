@@ -37,7 +37,7 @@ public class RPNCalculator {
 
     public static void main(String[] args) {
         RPNCalculator calculator = new RPNCalculator();
-        String expression = "6 2 *";
+        String expression = "7 4 8 * 9 + *";
         System.out.println("Result: " + calculator.evaluate(expression));
     }
 }
