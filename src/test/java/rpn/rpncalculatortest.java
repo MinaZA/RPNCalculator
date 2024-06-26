@@ -17,4 +17,10 @@ public class RPNCalculatorTest {
         assertEquals(2.0, calculator.evaluate("5 3 -"), 0.0001);
         assertEquals(0.0, calculator.evaluate("3 3 -"), 0.0001);
     }
+
+    @Test
+    public void testMultiplication() {
+        assertEquals(12.0, calculator.evaluate("6 2 *"), 0.0001);
+        assertEquals(15.0, calculator.evaluate("3 5 *"), 0.0001);
+    }
 }
